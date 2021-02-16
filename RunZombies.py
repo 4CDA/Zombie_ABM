@@ -139,7 +139,7 @@ for seed in range(seed_total):
 
 # Histogram: Max human Life
 plt.hist(t_results, bins=max(t_results)-min(t_results))
-plt.title("Distribution of Max Human Age over 1000 Simulations")
+plt.title("Distribution of Max Human Age over "+str(seed_total)+" Simulations")
 plt.yticks(list(range(80, 10)), "")
 if output_vis:
     plt.savefig(folder+"/Max Human Age.png")
@@ -149,7 +149,7 @@ else:
 
 # Histogram: Average Human Life
 plt.hist(age_average, bins=int(np.ceil(max(t_results))-np.floor(min(t_results))))
-plt.title("Distribution of Average Human Age over 1000 Simulations")
+plt.title("Distribution of Average Human Age over "+str(seed_total)+" Simulations")
 plt.yticks(list(range(80, 10)), "")
 if output_vis:
     plt.savefig(folder+"/Average Human Age.png")
